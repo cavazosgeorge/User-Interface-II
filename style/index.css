@@ -1,4 +1,3 @@
-/* Add CSS styling here */ 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -19,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-
+	
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -72,7 +71,7 @@ header{
     background-color:grey;
     border-top:2px solid white;
     border-bottom:2px solid white;
-
+    
 }
 .name{
     display:flex;
@@ -95,7 +94,7 @@ nav > a{
     align-items:center;
     text-decoration:none;
     font-size:2rem;
-    margin-top:1.5%;
+    margin-top: 1.5%;
     margin-bottom:1.5%;
     border:1px solid black;
     color:black;
@@ -115,16 +114,16 @@ a:hover{
 .top{
     justify-content:center;
     align-items:center;
-    background-repeat: no-repeat;
-    background-position: center;
     flex-direction:column;
     width:70%;
     margin: 0 auto;
     background-image:url('https://images.unsplash.com/photo-1618528225236-54eef10da6fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+    background-repeat: no-repeat;
+    padding-top: 1;
+    
     border-radius:2%;
     margin-top: 4%
-
-
+    
 }
 
 .top > h1,button{
@@ -138,7 +137,7 @@ a:hover{
     font-size:5rem;
     margin:2%;
     font-family: 'LimeLight', cursive;
-
+    
 }
 button{
     padding: 1% 2%;
@@ -153,15 +152,25 @@ button{
 .middle{
     display:flex;
     width:100%;
-    height:50vh;
+    height:80vh;
     justify-content:space-between;
-    margin-top:10%;
-
+    margin-top:6%;
+    flex-wrap: wrap;
+    margin-bottom:6%
+    
 }
 .project1, .project2, .project3 {
-    width:30%;
+    width:28%;
     align-items:center;
-
+    margin-top: 2%;
+    
+    
+}
+.project4, .project5, .project6{
+    width:28%;
+    align-items:center;
+    margin-top: 2%;
+    
 }
 
 h2{
@@ -172,60 +181,38 @@ h2{
     color:white;
     margin-top:3%;
     font-family: 'Odibee Sans', cursive;
-
+    
 }
 
-.bottom{
-    display:flex;
-    width:100%;
-    height:40vh;
-    justify-content:space-between;
-    margin-top:10%;
-    margin-bottom:10%;
-}
 
-.project4, .project5, .project6{
-    width: 30%;
-    align-items:center;
-}
+
 
 .middle > .project1 >img{
     border-radius:10px;
     border:2px solid #f2ebeb;
-    width: 100%;
-    height: 40vh;
+    
 
 }
 .middle > .project2 >img{
     border-radius:10px;
-    border:2px solid #f2ebeb;
-    width: 100%;
-    height: 40vh;
+    border:2px solid #f2ebeb
 }
 .middle > .project3 >img{
     border-radius:10px;
-    border:2px solid #f2ebeb;
-    width: 100%;
-    height: 40vh;
+    border:2px solid #f2ebeb
 }
 
-.bottom > .project4 >img{
+.middle > .project4 >img{
     border-radius:10px;
-    border:2px solid #f2ebeb;
-    width: 100%;
-    height: 40vh;
+    border:2px solid #f2ebeb
 }
-.bottom > .project5 >img{
+.middle > .project5 >img{
     border-radius:10px;
-    border:2px solid #f2ebeb;
-    width: 100%;
-    height: 40vh;
+    border:2px solid #f2ebeb
 }
-.bottom > .project6 >img{
+.middle > .project6 >img{
     border-radius:10px;
-    border:2px solid #f2ebeb;
-    width: 100%;
-    height: 40vh;
+    border:2px solid #f2ebeb
 }
 
 footer{
@@ -237,6 +224,7 @@ footer{
     background-color:grey;
     border-top:2px solid white;
     border-bottom:2px solid white;
+    margin-top: 4%;
 }
 
 button:hover{
@@ -245,4 +233,53 @@ button:hover{
 }
 p{
     font-family:'Courier New', Courier, monospace
+}
+
+
+@media (max-width:800px) {
+    header{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+    }
+    nav{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    a{
+        padding-top:1%;
+        padding-bottom: 1%;
+    }
+    .top{
+        height: 30vh;
+        background-position: bottom;
+    }
+    .middle{
+        flex-wrap: wrap; 
+        justify-content: space-around;
+        height:auto;  
+    }
+   .project1,.project2,.project3,.project4,.project5,.project6{
+        /*width:400%;*/
+        width: 40%;
+    }
+    
+}
+
+
+@media (max-width:500px){
+    .name{
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+    a>p{
+        font-size: 1.8rem;
+    }
+    
+    
 }
